@@ -340,7 +340,15 @@ https://cdn.example.com/js/app.js?id=1964becbdd96414518cd
 mix.browserSync('laravel.test');
 ```
 
-[BrowserSync options](https://browsersync.io/docs/options) may be specified by passing a JavaScript object to the `browserSync` method:
+Or if you're using `artisan serve`, like so:
+
+```js
+mix.browserSync({
+    proxy: 'localhost:8000'
+});
+```
+
+[BrowserSync options](https://browsersync.io/docs/options) may be specified by passing a JavaScript object to the `browserSync` method in the same way:
 
 ```js
 mix.browserSync({
